@@ -1,0 +1,434 @@
+object frmFejKivetel: TfrmFejKivetel
+  Left = 521
+  Height = 596
+  Top = 201
+  Width = 864
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Beültetőfej kivétele a szekrényből...'
+  ClientHeight = 596
+  ClientWidth = 864
+  DesignTimePPI = 120
+  OnActivate = FormActivate
+  OnClose = FormClose
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  object Label1: TLabel
+    Left = 32
+    Height = 21
+    Top = 40
+    Width = 85
+    Caption = 'Fej típusa : '
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object cmbFejtipus: TComboBox
+    Left = 128
+    Height = 29
+    Top = 32
+    Width = 166
+    AutoComplete = True
+    AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ItemHeight = 21
+    OnChange = cmbFejtipusChange
+    ParentFont = False
+    Style = csDropDownList
+    TabOrder = 0
+  end
+  object btnMegsem: TButton
+    Left = 152
+    Height = 40
+    Top = 520
+    Width = 113
+    Caption = 'Mégsem'
+    OnClick = btnMegsemClick
+    TabOrder = 4
+  end
+  object GroupBox1: TGroupBox
+    Left = 16
+    Height = 408
+    Top = 88
+    Width = 395
+    Caption = 'Infók a kiválasztott fejről...'
+    ClientHeight = 383
+    ClientWidth = 391
+    Color = clSkyBlue
+    ParentColor = False
+    TabOrder = 1
+    object Label2: TLabel
+      Left = 16
+      Height = 21
+      Top = 56
+      Width = 109
+      Caption = 'Sorozatszám : '
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object edtSorozatszam: TEdit
+      Left = 128
+      Height = 29
+      Top = 48
+      Width = 166
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object Label7: TLabel
+      Left = 16
+      Height = 21
+      Top = 96
+      Width = 101
+      Caption = 'Fej állapota : '
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 16
+      Height = 21
+      Top = 136
+      Width = 97
+      Caption = 'S korrekció : '
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object edtSKorrekcio: TEdit
+      Left = 128
+      Height = 29
+      Top = 128
+      Width = 96
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 1
+    end
+    object Label4: TLabel
+      Left = 16
+      Height = 21
+      Top = 176
+      Width = 98
+      Caption = 'Z korrekció : '
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object edtZKorrekcio: TEdit
+      Left = 128
+      Height = 29
+      Top = 168
+      Width = 96
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 2
+    end
+    object Label5: TLabel
+      Left = 16
+      Height = 21
+      Top = 216
+      Width = 100
+      Caption = 'D korrekció : '
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object edtDKorrekcio: TEdit
+      Left = 128
+      Height = 29
+      Top = 208
+      Width = 96
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 3
+    end
+    object Label6: TLabel
+      Left = 16
+      Height = 21
+      Top = 256
+      Width = 103
+      Caption = 'Megjegyzés : '
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object memMegjegyzes: TMemo
+      Left = 16
+      Height = 72
+      Top = 288
+      Width = 359
+      Lines.Strings = (
+        'memMegjegyzes'
+      )
+      ReadOnly = True
+      ScrollBars = ssAutoVertical
+      TabOrder = 4
+    end
+    object edtFejAllapota: TEdit
+      Left = 128
+      Height = 29
+      Top = 88
+      Width = 256
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 5
+    end
+    object Label8: TLabel
+      Left = 16
+      Height = 21
+      Top = 16
+      Width = 92
+      Caption = 'Ajtó száma :'
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object edtAjtoSzama: TEdit
+      Left = 128
+      Height = 29
+      Top = 8
+      Width = 56
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 6
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 440
+    Height = 408
+    Top = 88
+    Width = 395
+    Caption = 'Beültetőfej kivétele a szekrényből...'
+    ClientHeight = 383
+    ClientWidth = 391
+    Color = clYellow
+    ParentColor = False
+    TabOrder = 2
+    object Label9: TLabel
+      Left = 16
+      Height = 21
+      Top = 136
+      Width = 33
+      Caption = 'Sor :'
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label10: TLabel
+      Left = 16
+      Height = 21
+      Top = 176
+      Width = 80
+      Caption = 'Gép típus :'
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label11: TLabel
+      Left = 16
+      Height = 21
+      Top = 216
+      Width = 54
+      Caption = 'Portál :'
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label14: TLabel
+      Left = 320
+      Height = 21
+      Top = 328
+      Width = 103
+      Caption = 'Megjegyzés : '
+      Enabled = False
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      Visible = False
+    end
+    object memKiMegjegyzes: TMemo
+      Left = 320
+      Height = 72
+      Top = 360
+      Width = 359
+      Enabled = False
+      Lines.Strings = (
+        'memMegjegyzes'
+      )
+      ScrollBars = ssAutoVertical
+      TabOrder = 0
+      Visible = False
+    end
+    object Label15: TLabel
+      Left = 16
+      Height = 21
+      Top = 16
+      Width = 93
+      Caption = 'Kivétel oka :'
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object cmbKivetelOka: TComboBox
+      Left = 128
+      Height = 29
+      Top = 8
+      Width = 166
+      AutoComplete = True
+      AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ItemHeight = 21
+      OnChange = cmbKivetelOkaChange
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 1
+    end
+    object Bevel1: TBevel
+      Left = 18
+      Height = 32
+      Top = 72
+      Width = 357
+      Shape = bsFrame
+    end
+    object Label16: TLabel
+      Left = 18
+      Height = 15
+      Top = 80
+      Width = 357
+      Alignment = taCenter
+      AutoSize = False
+      Caption = 'Felhasználással kapcsolatos infók :'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object cmbGeptipus: TComboBox
+      Left = 128
+      Height = 29
+      Top = 168
+      Width = 96
+      AutoComplete = True
+      AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ItemHeight = 21
+      OnChange = cmbGeptipusChange
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 3
+    end
+    object cmbSor: TComboBox
+      Left = 128
+      Height = 29
+      Top = 128
+      Width = 96
+      AutoComplete = True
+      AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ItemHeight = 21
+      OnChange = cmbSorChange
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 2
+    end
+    object cmbPortal: TComboBox
+      Left = 128
+      Height = 29
+      Top = 208
+      Width = 48
+      AutoComplete = True
+      AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ItemHeight = 21
+      ItemIndex = 0
+      Items.Strings = (
+        '1'
+        '2'
+        '3'
+        '4'
+      )
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 4
+      Text = '1'
+    end
+    object Label12: TLabel
+      Left = 16
+      Height = 21
+      Top = 256
+      Width = 43
+      Caption = 'DS7i :'
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object edtDS7i: TEdit
+      Left = 128
+      Height = 29
+      Top = 248
+      Width = 128
+      Font.Height = -16
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 5
+    end
+  end
+  object btnKivetel: TButton
+    Left = 592
+    Height = 40
+    Top = 432
+    Width = 113
+    Caption = 'Fej kivétele...'
+    OnClick = btnKivetelClick
+    TabOrder = 3
+  end
+  object Serial: TLazSerial
+    Active = False
+    BaudRate = br_19200
+    DataBits = db8bits
+    Parity = pNone
+    FlowControl = fcNone
+    StopBits = sbOne
+    Device = 'COM7'
+    RcvLineCRLF = False
+    left = 344
+    top = 32
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    left = 443
+    top = 27
+  end
+end

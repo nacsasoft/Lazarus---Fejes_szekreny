@@ -1,0 +1,97 @@
+object frmFomenu: TfrmFomenu
+  Left = 932
+  Height = 286
+  Top = 290
+  Width = 340
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Tartalék beültetőfejek kezelése...'
+  ClientHeight = 286
+  ClientWidth = 340
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '1.6.0.4'
+  object Label1: TLabel
+    Left = 72
+    Height = 24
+    Top = 24
+    Width = 208
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Felhasználó :'
+    Font.Height = -16
+    ParentColor = False
+    ParentFont = False
+  end
+  object edtAzonosito: TEdit
+    Left = 72
+    Height = 25
+    Top = 49
+    Width = 208
+    Alignment = taCenter
+    Font.Color = clRed
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentFont = False
+    ReadOnly = True
+    TabStop = False
+    TabOrder = 5
+  end
+  object btnFejKi: TButton
+    Left = 16
+    Height = 37
+    Top = 114
+    Width = 136
+    Caption = 'Beültetőfej kivétel'
+    OnClick = btnFejKiClick
+    TabOrder = 0
+  end
+  object btnFejBe: TButton
+    Left = 192
+    Height = 37
+    Top = 114
+    Width = 136
+    Caption = 'Beültetőfej elhelyezése'
+    OnClick = btnFejBeClick
+    TabOrder = 1
+  end
+  object btnSettings: TButton
+    Left = 256
+    Height = 29
+    Top = 248
+    Width = 80
+    Caption = 'Beállítások...'
+    Enabled = False
+    OnClick = btnSettingsClick
+    TabOrder = 4
+  end
+  object btnPreventiveKarbantartas: TButton
+    Left = 16
+    Height = 37
+    Top = 184
+    Width = 136
+    Caption = 'Preventív karbantartás'
+    Enabled = False
+    OnClick = btnPreventiveKarbantartasClick
+    TabOrder = 2
+  end
+  object btnRiportok: TButton
+    Left = 192
+    Height = 37
+    Top = 184
+    Width = 136
+    Caption = 'Riportok...'
+    Enabled = False
+    OnClick = btnPreventiveKarbantartasClick
+    TabOrder = 3
+  end
+  object Shape1: TShape
+    Left = 9
+    Height = 8
+    Top = 163
+    Width = 323
+    Pen.Color = clMaroon
+  end
+end

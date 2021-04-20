@@ -1,0 +1,11 @@
+object frmPrevKarb: TfrmPrevKarb
+  Left = 654
+  Height = 275
+  Top = 353
+  Width = 434
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Tartalék beültetőfejek kezelése... Preventív karb.'
+  OnClose = FormClose
+  LCLVersion = '1.6.0.4'
+end

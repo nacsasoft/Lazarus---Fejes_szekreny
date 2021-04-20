@@ -1,0 +1,108 @@
+object frmJelszomod: TfrmJelszomod
+  Left = 599
+  Height = 266
+  Top = 333
+  Width = 485
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Tartalék beültetőfejek kezelése...'
+  ClientHeight = 266
+  ClientWidth = 485
+  OnActivate = FormActivate
+  OnClose = FormClose
+  Position = poScreenCenter
+  ShowInTaskBar = stAlways
+  LCLVersion = '1.6.0.4'
+  object Label2: TLabel
+    Left = 136
+    Height = 21
+    Top = 80
+    Width = 73
+    Caption = 'Új jelszó :'
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 32
+    Height = 21
+    Top = 120
+    Width = 169
+    Caption = 'Új jelszó mégegyszer :'
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object edtUjJelszo: TEdit
+    Left = 232
+    Height = 29
+    Top = 80
+    Width = 214
+    EchoMode = emPassword
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentFont = False
+    PasswordChar = '*'
+    TabOrder = 1
+  end
+  object edtUjJelszoUjra: TEdit
+    Left = 232
+    Height = 29
+    Top = 120
+    Width = 214
+    EchoMode = emPassword
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentFont = False
+    PasswordChar = '*'
+    TabOrder = 2
+  end
+  object btnModosit: TButton
+    Left = 283
+    Height = 41
+    Top = 200
+    Width = 118
+    Caption = 'Módosít'
+    Font.Height = -13
+    Font.Style = [fsBold]
+    OnClick = btnModositClick
+    ParentFont = False
+    TabOrder = 3
+  end
+  object btnMegsem: TButton
+    Left = 86
+    Height = 41
+    Top = 200
+    Width = 118
+    Caption = 'Mégsem'
+    Font.Height = -13
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+  end
+  object Label4: TLabel
+    Left = 136
+    Height = 21
+    Top = 40
+    Width = 90
+    Caption = 'Régi jelszó :'
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object edtRegiJelszo: TEdit
+    Left = 232
+    Height = 29
+    Top = 40
+    Width = 214
+    EchoMode = emPassword
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentFont = False
+    PasswordChar = '*'
+    TabOrder = 0
+  end
+end

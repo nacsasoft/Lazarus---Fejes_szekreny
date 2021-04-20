@@ -1,0 +1,203 @@
+object frmSettings: TfrmSettings
+  Left = 524
+  Height = 310
+  Top = 352
+  Width = 524
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsDialog
+  Caption = 'Tartalék beültetőfejek kezelése... Beállítások'
+  ClientHeight = 310
+  ClientWidth = 524
+  OnActivate = FormActivate
+  OnCloseQuery = FormCloseQuery
+  Position = poDesktopCenter
+  LCLVersion = '1.6.0.4'
+  object Shape2: TShape
+    Left = 16
+    Height = 224
+    Top = 8
+    Width = 232
+    BorderSpacing.InnerBorder = 2
+    Brush.Color = clYellow
+    Pen.JoinStyle = pjsBevel
+    Pen.Mode = pmMask
+  end
+  object Shape1: TShape
+    Left = 272
+    Height = 224
+    Top = 8
+    Width = 232
+    BorderSpacing.InnerBorder = 2
+    Brush.Color = clYellow
+    Pen.JoinStyle = pjsBevel
+    Pen.Mode = pmMask
+  end
+  object Label1: TLabel
+    Left = 48
+    Height = 15
+    Top = 24
+    Width = 62
+    Caption = 'COM port : '
+    ParentColor = False
+  end
+  object cmbCOM: TComboBox
+    Left = 125
+    Height = 23
+    Top = 16
+    Width = 88
+    ItemHeight = 15
+    ItemIndex = 0
+    Items.Strings = (
+      'COM1'
+      'COM2'
+      'COM3'
+      'COM4'
+      'COM5'
+      'COM6'
+      'COM7'
+      'COM8'
+      'COM9'
+      'COM10'
+      'COM11'
+      'COM12'
+      'COM13'
+      'COM14'
+      'COM15'
+      'COM16'
+      'COM17'
+      'COM18'
+      'COM19'
+      'COM20'
+    )
+    Style = csDropDownList
+    TabOrder = 0
+    Text = 'COM1'
+  end
+  object btnMentes: TButton
+    Left = 152
+    Height = 29
+    Top = 192
+    Width = 78
+    Caption = 'Mentés'
+    OnClick = btnMentesClick
+    TabOrder = 1
+  end
+  object btnMegsem: TButton
+    Left = 426
+    Height = 29
+    Top = 264
+    Width = 78
+    Caption = 'Kilépés'
+    OnClick = btnMegsemClick
+    TabOrder = 2
+  end
+  object chgAjtokNyitasaZarasa: TCheckGroup
+    Left = 280
+    Height = 172
+    Top = 16
+    Width = 216
+    AutoFill = True
+    Caption = 'Ajtók nyitása/zárása'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousSpaceResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 3
+    ClientHeight = 152
+    ClientWidth = 212
+    Columns = 3
+    Items.Strings = (
+      '1'
+      '5'
+      '9'
+      '2'
+      '6'
+      '10'
+      '3'
+      '7'
+      '11'
+      '4'
+      '8'
+      '12'
+    )
+    TabOrder = 3
+    Data = {
+      0C000000020202020202020202020202
+    }
+  end
+  object btnNyitas: TButton
+    Left = 288
+    Height = 30
+    Top = 192
+    Width = 77
+    Caption = 'Nyitás'
+    OnClick = btnNyitasClick
+    TabOrder = 4
+  end
+  object btnZaras: TButton
+    Left = 416
+    Height = 30
+    Top = 192
+    Width = 72
+    Caption = 'Zárás'
+    OnClick = btnZarasClick
+    TabOrder = 5
+  end
+  object Label2: TLabel
+    Left = 48
+    Height = 15
+    Top = 54
+    Width = 102
+    Caption = 'Férőhelyek száma : '
+    ParentColor = False
+  end
+  object edtFerohelyek_szama: TEdit
+    Left = 175
+    Height = 23
+    Top = 46
+    Width = 38
+    NumbersOnly = True
+    TabOrder = 6
+  end
+  object chkCOMPORT_VEZERLES: TCheckBox
+    Left = 200
+    Height = 19
+    Top = 89
+    Width = 20
+    Checked = True
+    OnChange = chkCOMPORT_VEZERLESChange
+    State = cbChecked
+    TabOrder = 7
+  end
+  object Label3: TLabel
+    Left = 48
+    Height = 28
+    Top = 80
+    Width = 137
+    AutoSize = False
+    Caption = 'COM port vezérlés : '#13#10'(ajtók nyitása / zárása)'
+    ParentColor = False
+    WordWrap = True
+  end
+  object Serial: TLazSerial
+    Active = False
+    BaudRate = br__9600
+    DataBits = db8bits
+    Parity = pNone
+    FlowControl = fcNone
+    StopBits = sbOne
+    Device = 'COM7'
+    RcvLineCRLF = False
+    left = 464
+    top = 48
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    left = 464
+    top = 112
+  end
+end

@@ -1,0 +1,29 @@
+program FejesSzekrenyVezerles;
+
+{$mode objfpc}{$H+}
+
+uses
+  {$IFDEF UNIX}{$IFDEF UseCThreads}
+  cthreads,
+  {$ENDIF}{$ENDIF}
+  Interfaces, // this includes the LCL widgetset
+  Forms, LazSerialPort, sqlite3laz, main, global, database, fomenu, jelszomod,
+  fejkivetel, fejbehelyezes, settings, prevkarb
+  { you can add units after this };
+
+{$R *.res}
+
+begin
+  Application.Title := 'ASMHeadPreventive';
+  RequireDerivedFormResource := True;
+  Application.Initialize;
+  Application.CreateForm(TfrmMain, frmMain);
+  Application.CreateForm(TfrmFomenu, frmFomenu);
+  Application.CreateForm(TfrmJelszomod, frmJelszomod);
+  Application.CreateForm(TfrmFejKivetel, frmFejKivetel);
+  Application.CreateForm(TfrmFejBehelyezes, frmFejBehelyezes);
+  Application.CreateForm(TfrmSettings, frmSettings);
+  Application.CreateForm(TfrmPrevKarb, frmPrevKarb);
+  Application.Run;
+end.
+

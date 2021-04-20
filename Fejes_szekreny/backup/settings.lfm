@@ -1,0 +1,223 @@
+object frmSettings: TfrmSettings
+  Left = 683
+  Height = 310
+  Top = 333
+  Width = 870
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsDialog
+  Caption = 'Tartalék beültetőfejek kezelése... Beállítások'
+  ClientHeight = 310
+  ClientWidth = 870
+  DesignTimePPI = 120
+  OnCloseQuery = FormCloseQuery
+  OnShow = FormActivate
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  object Shape2: TShape
+    Left = 16
+    Height = 224
+    Top = 8
+    Width = 232
+    BorderSpacing.InnerBorder = 2
+    Brush.Color = clYellow
+    Pen.JoinStyle = pjsBevel
+    Pen.Mode = pmMask
+  end
+  object Shape1: TShape
+    Left = 280
+    Height = 224
+    Top = 8
+    Width = 280
+    BorderSpacing.InnerBorder = 2
+    Brush.Color = clYellow
+    Pen.JoinStyle = pjsBevel
+    Pen.Mode = pmMask
+  end
+  object Label1: TLabel
+    Left = 48
+    Height = 20
+    Top = 24
+    Width = 76
+    Caption = 'COM port : '
+    ParentColor = False
+  end
+  object cmbCOM: TComboBox
+    Left = 125
+    Height = 28
+    Top = 16
+    Width = 88
+    ItemHeight = 20
+    Style = csDropDownList
+    TabOrder = 0
+  end
+  object btnMentes: TButton
+    Left = 152
+    Height = 29
+    Top = 192
+    Width = 78
+    Caption = 'Mentés'
+    OnClick = btnMentesClick
+    TabOrder = 1
+  end
+  object btnMegsem: TButton
+    Left = 396
+    Height = 29
+    Top = 264
+    Width = 78
+    Caption = 'Kilépés'
+    OnClick = btnMegsemClick
+    TabOrder = 2
+  end
+  object chgAjtokNyitasaZarasa: TCheckGroup
+    Left = 288
+    Height = 172
+    Top = 16
+    Width = 272
+    AutoFill = True
+    Caption = 'Ajtók nyitása/zárása'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousSpaceResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 4
+    ClientHeight = 147
+    ClientWidth = 268
+    Columns = 4
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5'
+      '6'
+      '7'
+      '8'
+      '9'
+      '10'
+      '11'
+      '12'
+      '13'
+      '14'
+      '15'
+      '16'
+    )
+    TabOrder = 3
+    Data = {
+      1000000002020202020202020202020202020202
+    }
+  end
+  object btnNyitas: TButton
+    Left = 296
+    Height = 30
+    Top = 191
+    Width = 77
+    Caption = 'Nyitás'
+    OnClick = btnNyitasClick
+    TabOrder = 4
+  end
+  object btnZaras: TButton
+    Left = 472
+    Height = 30
+    Top = 191
+    Width = 72
+    Caption = 'Zárás'
+    OnClick = btnZarasClick
+    TabOrder = 5
+  end
+  object Label2: TLabel
+    Left = 48
+    Height = 20
+    Top = 54
+    Width = 128
+    Caption = 'Férőhelyek száma : '
+    ParentColor = False
+  end
+  object edtFerohelyek_szama: TEdit
+    Left = 175
+    Height = 28
+    Top = 46
+    Width = 38
+    NumbersOnly = True
+    TabOrder = 6
+  end
+  object chkCOMPORT_VEZERLES: TCheckBox
+    Left = 200
+    Height = 23
+    Top = 89
+    Width = 24
+    Checked = True
+    OnChange = chkCOMPORT_VEZERLESChange
+    State = cbChecked
+    TabOrder = 7
+  end
+  object Label3: TLabel
+    Left = 48
+    Height = 40
+    Top = 80
+    Width = 137
+    AutoSize = False
+    Caption = 'COM port vezérlés : '#13#10'(ajtók nyitása / zárása)'
+    ParentColor = False
+    WordWrap = True
+  end
+  object GroupBox1: TGroupBox
+    Left = 592
+    Height = 224
+    Top = 8
+    Width = 264
+    Caption = 'Fej törlése...'
+    ClientHeight = 199
+    ClientWidth = 260
+    Color = clRed
+    ParentColor = False
+    TabOrder = 8
+    object Label4: TLabel
+      Left = 8
+      Height = 20
+      Top = 16
+      Width = 104
+      AutoSize = False
+      Caption = 'Fej sorozatsz. :'
+      ParentColor = False
+    end
+    object cmbFejSorozatszam: TComboBox
+      Left = 112
+      Height = 28
+      Top = 8
+      Width = 136
+      ItemHeight = 20
+      Style = csDropDownList
+      TabOrder = 0
+    end
+    object btnTorles: TButton
+      Left = 90
+      Height = 31
+      Top = 128
+      Width = 94
+      Caption = 'Törlés'
+      OnClick = btnTorlesClick
+      TabOrder = 1
+    end
+  end
+  object Serial: TLazSerial
+    Active = False
+    BaudRate = br__9600
+    DataBits = db8bits
+    Parity = pNone
+    FlowControl = fcNone
+    StopBits = sbOne
+    Device = 'COM7'
+    RcvLineCRLF = False
+    left = 24
+    top = 232
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    left = 128
+    top = 240
+  end
+end
