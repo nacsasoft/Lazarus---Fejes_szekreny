@@ -134,7 +134,6 @@ begin
   end;
   }
 
-
   chkUjFej.Visible := true;
   chkUjFej.Checked := false;
   chkUjFejChange(Sender);

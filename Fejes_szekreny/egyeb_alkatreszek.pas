@@ -64,7 +64,7 @@ implementation
 
 { TfrmEgyebAlkatreszek }
 
-uses main, progress, uj_alkatresz_felvitele;
+uses main, progress, uj_alkatresz_felvitele, fomenu;
 
 procedure TfrmEgyebAlkatreszek.FormShow(Sender: TObject);
 var
@@ -103,14 +103,15 @@ begin
   //kiválasztott alkatrész adatainak megjelenítése:
   edtMegnevezes.Text := stgEgyebAlkatreszek.Cells[2, aRow];
   edtRendelesiSzam.Text := stgEgyebAlkatreszek.Cells[1, aRow];
-  edtKiDarabszam.Text := stgEgyebAlkatreszek.Cells[3, aRow];
+  edtKiDarabszam.Text := '0'; // stgEgyebAlkatreszek.Cells[3, aRow];  // Horsa Cs. kérésére módosítva 2022.03.24.
 end;
 
 procedure TfrmEgyebAlkatreszek.FormClose(Sender: TObject;
   var CloseAction: TCloseAction);
 begin
   frmEgyebAlkatreszek.Hide;
-  frmMain.Show;
+  //frmMain.Show;
+  frmFomenu.Show;
 end;
 
 procedure TfrmEgyebAlkatreszek.btnAlkatreszKiveteleClick(Sender: TObject);
@@ -165,6 +166,7 @@ begin
 
   mySqlite3 := cSqliteDatabase.Create('egyeb_alkatreszek', 'SELECT * FROM egyeb_alkatreszek ORDER BY id;', 'id');
 
+  // új darabszám
   iDarab := iDarab - iKiDarab;
   if iDarab = 0 then
     begin

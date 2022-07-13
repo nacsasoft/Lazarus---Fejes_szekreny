@@ -51,14 +51,15 @@ begin
 
       //While Serial.SynSer.WaitingData < 6 do
         // begin
-           Application.ProcessMessages; //többi alkalmazás folyamatok fussanak.......
-           Sleep(1000);
+           //Application.ProcessMessages; //többi alkalmazás folyamatok fussanak.......
+           Sleep(1500);
          //end;
      Memo1.Text := Memo1.Text + Serial.ReadData;
 end;
 
 procedure TForm1.btnOpenPortClick(Sender: TObject);
 begin
+     Serial.Device := 'COM7';
      Serial.Open;
 end;
 
@@ -67,7 +68,7 @@ begin
      Serial.SynSer.LineBuffer := '';
      Serial.WriteData('gpio read ' + cmbCsatornaSzama.Text + chr(13));
      Application.ProcessMessages; //többi alkalmazás folyamatok fussanak.......
-     Sleep(1000);
+     Sleep(500);
      Memo1.Text := Memo1.Text + Serial.ReadData;
 
 end;
@@ -81,7 +82,7 @@ procedure TForm1.btnCsatornaBEClick(Sender: TObject);
 begin
      Serial.WriteData('gpio set ' + cmbCsatornaSzama.Text + chr(13));
      Application.ProcessMessages; //többi alkalmazás folyamatok fussanak.......
-     Sleep(1000);
+     Sleep(500);
      Memo1.Text := Memo1.Text + Serial.ReadData;
 end;
 
@@ -89,7 +90,7 @@ procedure TForm1.btnCsatornaKIClick(Sender: TObject);
 begin
      Serial.WriteData('gpio clear ' + cmbCsatornaSzama.Text + chr(13));
      Application.ProcessMessages; //többi alkalmazás folyamatok fussanak.......
-     Sleep(1000);
+     Sleep(500);
      Memo1.Text := Memo1.Text + Serial.ReadData;
 end;
 

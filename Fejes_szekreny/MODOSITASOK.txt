@@ -1,0 +1,5 @@
+/* 2022.07.01 */
+- Új fej felvitelkor nem lett beírva a db-be a fejhez a 'torolve' állapot :
+    FieldByName('torolve').AsInteger := 0;
+
+

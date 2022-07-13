@@ -30,7 +30,6 @@ type
     procedure btnSettingsClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
-    procedure FormCreate(Sender: TObject);
   private
     { private declarations }
     myDataset:          TSqlite3Dataset;
@@ -53,11 +52,6 @@ procedure TfrmFomenu.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   frmFomenu.Hide;
   frmMain.Show;
-end;
-
-procedure TfrmFomenu.FormCreate(Sender: TObject);
-begin
-
 end;
 
 procedure TfrmFomenu.FormActivate(Sender: TObject);

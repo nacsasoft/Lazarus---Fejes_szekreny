@@ -55,11 +55,6 @@ begin
   frmMain.Show;
 end;
 
-procedure TfrmFomenu.FormCreate(Sender: TObject);
-begin
-
-end;
-
 procedure TfrmFomenu.FormActivate(Sender: TObject);
 begin
      edtAzonosito.Text := userName;

@@ -12,7 +12,6 @@ object frmMain: TfrmMain
   OnActivate = FormActivate
   OnClose = FormClose
   Position = poScreenCenter
-  ShowInTaskBar = stAlways
   LCLVersion = '1.8.4.0'
   object Label1: TLabel
     Left = 56

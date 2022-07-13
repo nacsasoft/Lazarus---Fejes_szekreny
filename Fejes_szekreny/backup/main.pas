@@ -171,16 +171,19 @@ begin
   dbUpdate(myDataset,sql);
   iJoFejek := 1;
   iRosszFejek := 1;
+  {
   for i := 0 to stgHasznalhatoFejek.ColCount-1 do
     for j := 1 to stgHasznalhatoFejek.RowCount-1 do
         stgHasznalhatoFejek.Cells[i,j] := '';
   for i := 0 to stgNemHasznalhatoFejek.ColCount-1 do
     for j := 1 to stgNemHasznalhatoFejek.RowCount-1 do
         stgNemHasznalhatoFejek.Cells[i,j] := '';
+        }
 
   iRecNum := myDataset.RecordCount;
   //ShowMessage(inttostr(iRecNum));
   SetLength(iNemHasznalhatoFejek, iRecNum + 1);
+  stgHasznalhatoFejek.RowCount := 1;
 
   with myDataset do
   begin

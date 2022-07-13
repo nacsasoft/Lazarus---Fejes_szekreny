@@ -11,7 +11,6 @@ object frmFomenu: TfrmFomenu
   DesignTimePPI = 120
   OnActivate = FormActivate
   OnClose = FormClose
-  OnCreate = FormCreate
   Position = poScreenCenter
   ShowInTaskBar = stAlways
   LCLVersion = '1.8.4.0'

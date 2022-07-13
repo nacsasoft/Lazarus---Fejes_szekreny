@@ -320,6 +320,7 @@ begin
                 FieldByName('felh_gep_id').AsInteger := -1;
                 FieldByName('felh_gep_ds7i').AsString := '';
                 FieldByName('felh_portal').AsInteger := -1;
+                FieldByName('torolve').AsInteger := 0;
                 Post;
                 ApplyUpdates;
             end;

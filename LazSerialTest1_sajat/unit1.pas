@@ -51,14 +51,15 @@ begin
 
       //While Serial.SynSer.WaitingData < 6 do
         // begin
-           Application.ProcessMessages; //többi alkalmazás folyamatok fussanak.......
-           Sleep(500);
+           //Application.ProcessMessages; //többi alkalmazás folyamatok fussanak.......
+           Sleep(1500);
          //end;
      Memo1.Text := Memo1.Text + Serial.ReadData;
 end;
 
 procedure TForm1.btnOpenPortClick(Sender: TObject);
 begin
+     Serial.Device := 'COM7';
      Serial.Open;
 end;
 

@@ -1,13 +1,13 @@
 object frmEgyebAlkatreszek: TfrmEgyebAlkatreszek
   Left = 440
-  Height = 686
+  Height = 754
   Top = 154
-  Width = 1022
+  Width = 1092
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Tartalék beültetőfejek kezelése - Egyéb alkatrészek....'
-  ClientHeight = 686
-  ClientWidth = 1022
+  ClientHeight = 754
+  ClientWidth = 1092
   DesignTimePPI = 120
   OnClose = FormClose
   OnShow = FormShow
@@ -16,18 +16,18 @@ object frmEgyebAlkatreszek: TfrmEgyebAlkatreszek
   LCLVersion = '1.8.4.0'
   object GroupBox1: TGroupBox
     Left = 24
-    Height = 336
-    Top = 328
-    Width = 984
+    Height = 392
+    Top = 352
+    Width = 1048
     Caption = 'Szekrények tartalma...'
-    ClientHeight = 311
-    ClientWidth = 980
+    ClientHeight = 367
+    ClientWidth = 1044
     TabOrder = 0
     object stgEgyebAlkatreszek: TStringGrid
       Left = 8
-      Height = 288
+      Height = 352
       Top = 8
-      Width = 960
+      Width = 1024
       AutoEdit = False
       ColCount = 7
       Columns = <      
@@ -151,8 +151,8 @@ object frmEgyebAlkatreszek: TfrmEgyebAlkatreszek
       Left = 8
       Height = 20
       Top = 96
-      Width = 86
-      Caption = 'Darabszám : '
+      Width = 126
+      Caption = 'Kivett darabszám : '
       ParentColor = False
     end
     object edtMegnevezes: TEdit
@@ -190,17 +190,17 @@ object frmEgyebAlkatreszek: TfrmEgyebAlkatreszek
   end
   object GroupBox3: TGroupBox
     Left = 672
-    Height = 280
+    Height = 320
     Top = 24
-    Width = 328
+    Width = 400
     Caption = 'Alkatrész berakása a szekrénybe'
-    ClientHeight = 255
-    ClientWidth = 324
+    ClientHeight = 295
+    ClientWidth = 396
     TabOrder = 3
     object btnAlkatreszBerakas: TButton
-      Left = 176
+      Left = 248
       Height = 40
-      Top = 208
+      Top = 232
       Width = 136
       Caption = 'Alkatrész berakása'
       OnClick = btnAlkatreszBerakasClick
@@ -217,15 +217,15 @@ object frmEgyebAlkatreszek: TfrmEgyebAlkatreszek
     object Label5: TLabel
       Left = 8
       Height = 20
-      Top = 56
+      Top = 112
       Width = 86
       Caption = 'Darabszám : '
       ParentColor = False
     end
     object Label6: TLabel
-      Left = 8
+      Left = 224
       Height = 20
-      Top = 96
+      Top = 112
       Width = 103
       Caption = 'Szekrényszám : '
       ParentColor = False
@@ -233,8 +233,8 @@ object frmEgyebAlkatreszek: TfrmEgyebAlkatreszek
     object memMegjegyzes: TMemo
       Left = 8
       Height = 57
-      Top = 136
-      Width = 304
+      Top = 152
+      Width = 376
       Lines.Strings = (
         'Megjegyzés...'
       )
@@ -242,35 +242,35 @@ object frmEgyebAlkatreszek: TfrmEgyebAlkatreszek
       TabOrder = 1
     end
     object cmbAlkatreszek: TComboBox
-      Left = 112
-      Height = 26
-      Top = 8
-      Width = 200
+      Left = 8
+      Height = 28
+      Top = 48
+      Width = 376
+      AutoComplete = True
+      AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
       ItemHeight = 20
-      ReadOnly = True
-      Style = csOwnerDrawVariable
       TabOrder = 2
     end
     object edtBeDarabszam: TEdit
       Left = 112
       Height = 28
-      Top = 48
+      Top = 104
       Width = 48
       TabOrder = 3
     end
     object btnUjAlkatresz: TButton
       Left = 8
       Height = 40
-      Top = 208
+      Top = 232
       Width = 136
       Caption = 'Új alkatrész...'
       OnClick = btnUjAlkatreszClick
       TabOrder = 4
     end
     object cmbSzekrenyszam: TComboBox
-      Left = 112
+      Left = 328
       Height = 28
-      Top = 88
+      Top = 104
       Width = 56
       AutoComplete = True
       AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
