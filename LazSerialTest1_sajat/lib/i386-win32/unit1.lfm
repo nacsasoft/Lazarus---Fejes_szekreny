@@ -139,7 +139,7 @@ object Form1: TForm1
     Parity = pNone
     FlowControl = fcNone
     StopBits = sbOne
-    Device = 'COM7'
+    Device = 'COM8'
     RcvLineCRLF = False
   end
 end

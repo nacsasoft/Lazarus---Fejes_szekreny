@@ -59,7 +59,7 @@ end;
 
 procedure TForm1.btnOpenPortClick(Sender: TObject);
 begin
-     Serial.Device := 'COM7';
+     Serial.Device := 'COM8';
      Serial.Open;
 end;
 
@@ -80,7 +80,8 @@ end;
 
 procedure TForm1.btnCsatornaBEClick(Sender: TObject);
 begin
-     Serial.WriteData('gpio set ' + cmbCsatornaSzama.Text + chr(13));
+     //Serial.WriteData('gpio set ' + cmbCsatornaSzama.Text + chr(13)); // régi gpio modullal
+     Serial.WriteData('relay on ' + cmbCsatornaSzama.Text + chr(13));   // új relay modullal
      Application.ProcessMessages; //többi alkalmazás folyamatok fussanak.......
      Sleep(500);
      Memo1.Text := Memo1.Text + Serial.ReadData;
@@ -88,7 +89,8 @@ end;
 
 procedure TForm1.btnCsatornaKIClick(Sender: TObject);
 begin
-     Serial.WriteData('gpio clear ' + cmbCsatornaSzama.Text + chr(13));
+     //Serial.WriteData('gpio clear ' + cmbCsatornaSzama.Text + chr(13)); // régi gpio modullal
+     Serial.WriteData('relay off ' + cmbCsatornaSzama.Text + chr(13));    // új relay modullal
      Application.ProcessMessages; //többi alkalmazás folyamatok fussanak.......
      Sleep(500);
      Memo1.Text := Memo1.Text + Serial.ReadData;

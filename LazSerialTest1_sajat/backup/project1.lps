@@ -4,7 +4,7 @@
     <PathDelim Value="\"/>
     <Version Value="10"/>
     <BuildModes Active="Default"/>
-    <Units Count="3">
+    <Units Count="4">
       <Unit0>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -12,7 +12,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="40"/>
+        <UsageCount Value="138"/>
       </Unit0>
       <Unit1>
         <Filename Value="unit1.pas"/>
@@ -22,9 +22,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="43"/>
-        <CursorPos X="30" Y="62"/>
-        <UsageCount Value="40"/>
+        <TopLine Value="49"/>
+        <CursorPos X="28" Y="62"/>
+        <UsageCount Value="138"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -34,10 +34,19 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="145"/>
         <CursorPos Y="179"/>
-        <UsageCount Value="13"/>
+        <UsageCount Value="3"/>
       </Unit2>
+      <Unit3>
+        <Filename Value="C:\laz_conf_1_8\onlinepackagemanager\packages\LazSerial\lazserial.pas"/>
+        <UnitName Value="LazSerial"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="285"/>
+        <CursorPos Y="299"/>
+        <UsageCount Value="59"/>
+        <Loaded Value="True"/>
+      </Unit3>
     </Units>
-    <JumpHistory Count="24" HistoryIndex="23">
+    <JumpHistory Count="26" HistoryIndex="25">
       <Position1>
         <Filename Value="unit1.pas"/>
       </Position1>
@@ -133,6 +142,14 @@
         <Filename Value="unit1.pas"/>
         <Caret Line="92" Column="13" TopLine="44"/>
       </Position24>
+      <Position25>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="55" Column="20" TopLine="43"/>
+      </Position25>
+      <Position26>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="62" Column="28" TopLine="52"/>
+      </Position26>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
