@@ -29,7 +29,7 @@
         <Filename Value="global.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="13"/>
-        <TopLine Value="5"/>
+        <TopLine Value="32"/>
         <CursorPos X="18" Y="19"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -87,9 +87,10 @@
         <ComponentName Value="frmFejBehelyezes"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="10"/>
-        <TopLine Value="310"/>
-        <CursorPos X="55" Y="323"/>
+        <TopLine Value="235"/>
+        <CursorPos X="28" Y="257"/>
         <UsageCount Value="202"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -171,6 +172,15 @@
         <LoadedDesigner Value="True"/>
       </Unit13>
       <Unit14>
+        <Filename Value="MODOSITASOK.txt"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="14"/>
+        <CursorPos Y="5"/>
+        <UsageCount Value="163"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit14>
+      <Unit15>
         <Filename Value="mysqlitedatabase.pas"/>
         <UnitName Value="mySqliteDatabase"/>
         <EditorIndex Value="8"/>
@@ -178,19 +188,9 @@
         <CursorPos X="42" Y="38"/>
         <UsageCount Value="117"/>
         <Loaded Value="True"/>
-      </Unit14>
-      <Unit15>
-        <Filename Value="MODOSITASOK.txt"/>
-        <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="14"/>
-        <CursorPos Y="5"/>
-        <UsageCount Value="20"/>
-        <Loaded Value="True"/>
-        <DefaultSyntaxHighlighter Value="None"/>
       </Unit15>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="egyeb_alkatreszek.pas"/>
         <Caret Line="294" Column="35" TopLine="285"/>
@@ -301,16 +301,12 @@
       </Position27>
       <Position28>
         <Filename Value="fejbehelyezes.pas"/>
-        <Caret Line="222" TopLine="229"/>
+        <Caret Line="188" Column="31" TopLine="177"/>
       </Position28>
       <Position29>
         <Filename Value="fejbehelyezes.pas"/>
-        <Caret Line="188" Column="31" TopLine="177"/>
-      </Position29>
-      <Position30>
-        <Filename Value="fejbehelyezes.pas"/>
         <Caret Line="323" Column="39" TopLine="313"/>
-      </Position30>
+      </Position29>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
