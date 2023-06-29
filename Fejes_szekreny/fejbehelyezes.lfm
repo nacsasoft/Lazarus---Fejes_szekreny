@@ -1,7 +1,7 @@
 object frmFejBehelyezes: TfrmFejBehelyezes
-  Left = 622
+  Left = 583
   Height = 484
-  Top = 183
+  Top = 220
   Width = 490
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Beültetőfej elhelyezése a szekrényben'

@@ -184,6 +184,7 @@ begin
   //ShowMessage(inttostr(iRecNum));
   SetLength(iNemHasznalhatoFejek, iRecNum + 1);
   stgHasznalhatoFejek.RowCount := 1;
+  stgNemHasznalhatoFejek.RowCount := 1;
 
   with myDataset do
   begin

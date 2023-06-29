@@ -45,7 +45,7 @@
         <PackageName Value="LCL"/>
       </Item6>
     </RequiredPackages>
-    <Units Count="14">
+    <Units Count="15">
       <Unit0>
         <Filename Value="FejesSzekrenyVezerles.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -135,6 +135,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit13>
+      <Unit14>
+        <Filename Value="MODOSITASOK.txt"/>
+        <IsPartOfProject Value="True"/>
+      </Unit14>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

@@ -116,9 +116,14 @@ object frmMain: TfrmMain
       ColCount = 7
       FixedColor = clLime
       FixedCols = 0
+      Font.Color = clHighlightText
+      Font.Style = [fsBold]
       Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goSmoothScroll]
+      ParentFont = False
       RowCount = 1
       TabOrder = 0
+      TitleFont.Color = clHighlightText
+      TitleFont.Style = [fsBold]
       ColWidths = (
         32
         91
